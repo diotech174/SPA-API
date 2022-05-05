@@ -1,3 +1,7 @@
+---------------------------------------
+| Instruções da instalação do projeto |
+---------------------------------------
+
 Configurar Database:
 
 1. Crie um banco de Dados no seu MYSQL-SERVER
@@ -50,3 +54,4 @@ Starting Laravel development server: http://127.0.0.1:8000
 OBSERVAÇÕES:
 
 Acesse o endereço "http://127.0.0.1:8000" no seu browser para vizualizar a documentação
+
