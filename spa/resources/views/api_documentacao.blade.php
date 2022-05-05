@@ -104,7 +104,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/grupos/listar');
+                    curl_setopt($ch, CURLOPT_URL, '{{ url('/api/grupos/listar') }}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -133,7 +133,7 @@
             <div class="collapse bg-light p-4" id="g_cadastrar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/grupos/cadastrar");
+                    $ch = curl_init("{{ url('/api/grupos/cadastrar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -173,7 +173,7 @@
             <div class="collapse bg-light p-4" id="g_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/grupos/editar");
+                    $ch = curl_init("{{ url('/api/grupos/editar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -214,7 +214,7 @@
             <div class="collapse bg-light p-4" id="g_excluir">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/grupos/excluir");
+                    $ch = curl_init("{{ url('/api/grupos/excluir') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -274,7 +274,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/cidades/listar');
+                    curl_setopt($ch, CURLOPT_URL, '{{ url('/api/cidades/listar') }}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -315,7 +315,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/cidades_por_grupo/{grupo_de_cidades_id}');
+                    curl_setopt($ch, CURLOPT_URL, '{{ url('/api/cidades_por_grupo/{grupo_de_cidades_id}') }}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -347,7 +347,7 @@
             <div class="collapse bg-light p-4" id="c_cadastrar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/cidades/cadastrar");
+                    $ch = curl_init("{{ url('/api/cidades/cadastrar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -388,7 +388,7 @@
             <div class="collapse bg-light p-4" id="c_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/cidades/editar");
+                    $ch = curl_init("{{ url('/api/cidades/editar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -430,7 +430,7 @@
             <div class="collapse bg-light p-4" id="c_excluir">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/cidades/excluir");
+                    $ch = curl_init("{{ url('/api/cidades/excluir') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -490,7 +490,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/campanhas/listar');
+                    curl_setopt($ch, CURLOPT_URL, '{{ url('/api/campanhas/listar') }}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -531,7 +531,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/campanhas_por_grupo/{grupo_de_cidades_id}');
+                    curl_setopt($ch, CURLOPT_URL, '{{ url('/api/campanhas_por_grupo/{grupo_de_cidades_id}') }}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -558,7 +558,7 @@
             <div class="collapse bg-light p-4" id="cp_cadastrar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/campanhas/cadastrar");
+                    $ch = curl_init("{{ url('/api/campanhas/cadastrar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -599,7 +599,7 @@
             <div class="collapse bg-light p-4" id="cp_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/campanhas/editar");
+                    $ch = curl_init("{{ url('/api/campanhas/editar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -641,7 +641,7 @@
             <div class="collapse bg-light p-4" id="cp_excluir">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/campanhas/excluir");
+                    $ch = curl_init("{{ url('/api/campanhas/excluir') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -701,7 +701,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/produtos/listar');
+                    curl_setopt($ch, CURLOPT_URL, '{{ url('/api/produtos/listar') }}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -743,7 +743,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/getproduto/{id}');
+                    curl_setopt($ch, CURLOPT_URL, '{{ url('/api/getproduto/{id}') }}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -771,7 +771,7 @@
             <div class="collapse bg-light p-4" id="p_cadastrar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/produtos/cadastrar");
+                    $ch = curl_init("{{ url('/api/produtos/cadastrar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -812,7 +812,7 @@
             <div class="collapse bg-light p-4" id="p_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/produtos/editar");
+                    $ch = curl_init("{{ url('/api/produtos/editar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -854,7 +854,7 @@
             <div class="collapse bg-light p-4" id="p_excluir">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/produtos/excluir");
+                    $ch = curl_init("{{ url('/api/produtos/excluir') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -913,7 +913,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/produtos_de_campanhas/listar');
+                    curl_setopt($ch, CURLOPT_URL, '{{ url('/api/produtos_de_campanhas/listar') }}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -953,7 +953,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/getprodutos_de_campanhas/{campanha_id}');
+                    curl_setopt($ch, CURLOPT_URL, '{{ url('/api/getprodutos_de_campanhas/{campanha_id}') }}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -981,7 +981,7 @@
             <div class="collapse bg-light p-4" id="pc_cadastrar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/produtos_de_campanhas/cadastrar");
+                    $ch = curl_init("{{ url('/api/produtos_de_campanhas/cadastrar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -1021,7 +1021,7 @@
             <div class="collapse bg-light p-4" id="pc_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/produtos_de_campanhas/editar");
+                    $ch = curl_init("{{ url('/api/produtos_de_campanhas/editar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -1061,7 +1061,7 @@
             <div class="collapse bg-light p-4" id="pc_excluir">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/produtos_de_campanhas/excluir");
+                    $ch = curl_init("{{ url('/api/produtos_de_campanhas/excluir') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -1121,7 +1121,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/descontos/listar');
+                    curl_setopt($ch, CURLOPT_URL, '{{ url('/api/descontos/listar') }}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -1163,7 +1163,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/getdescontos/{produto_campanha_id}');
+                    curl_setopt($ch, CURLOPT_URL, '{{ url('/api/getdescontos/{produto_campanha_id}') }}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -1193,7 +1193,7 @@
             <div class="collapse bg-light p-4" id="d_cadastrar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/descontos/cadastrar");
+                    $ch = curl_init("{{ url('/api/descontos/cadastrar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -1233,7 +1233,7 @@
             <div class="collapse bg-light p-4" id="d_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/descontos/editar");
+                    $ch = curl_init("{{ url('/api/descontos/editar') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -1274,7 +1274,7 @@
             <div class="collapse bg-light p-4" id="d_excluir">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/descontos/excluir");
+                    $ch = curl_init("{{ url('/api/descontos/excluir') }}");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
