@@ -46,3 +46,7 @@ Resultado:
 
 Starting Laravel development server: http://127.0.0.1:8000
 [Thu May  5 13:20:41 2022] PHP 8.1.2 Development Server (http://127.0.0.1:8000) started
+
+OBSERVAÇÕES:
+
+Acesse o endereço "http://127.0.0.1:8000/api" para vizualizar a documentação
