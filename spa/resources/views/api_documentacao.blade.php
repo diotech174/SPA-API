@@ -18,6 +18,10 @@
             cursor: pointer;
             color: rgb(27, 123, 168);
         }
+        .new
+        {
+            color: rgb(66, 204, 77);
+        }rgb(27, 168, 69)rgb(44, 182, 85)
     </style>
 </head>
 <body>
@@ -294,7 +298,7 @@
             <!-- Listar cidades -->
 
             <!-- Listar cidades por grupo -->
-            <span class="font-weight-bold">Listar por grupo</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#c_listar_por_grupo">[GET] {{ url("/api/cidades_por_grupo/{grupo_de_cidades_id}") }}</span><br>
+            <span class="font-weight-bold text-success">Listar por grupo:</span> <span class="cursor-pointer new" data-toggle="collapse" data-target="#c_listar_por_grupo">[GET] {{ url("/api/cidades_por_grupo/{grupo_de_cidades_id}") }}</span><br>
 
             <div class="collapse bg-light p-4" id="c_listar_por_grupo">
                 Request PHP
@@ -510,7 +514,7 @@
             <!-- Listar campanhas -->
 
             <!-- Listar campanhas por grupo -->
-            <span class="font-weight-bold">Listar por grupo</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#cp_listar_por_grupo">[GET] {{ url("/api/campanhas_por_grupo/{grupo_de_cidades_id}") }}</span><br>
+            <span class="font-weight-bold text-success">Listar por grupo:</span> <span class="cursor-pointer new" data-toggle="collapse" data-target="#cp_listar_por_grupo">[GET] {{ url("/api/campanhas_por_grupo/{grupo_de_cidades_id}") }}</span><br>
 
             <div class="collapse bg-light p-4" id="cp_listar_por_grupo">
                 Request PHP
@@ -722,7 +726,7 @@
             <!-- Listar produtos -->
 
             <!-- Obter produto pelo ID -->
-            <span class="font-weight-bold">Obter produto pelo ID</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#p_getproduto">[GET] {{ url("/api/getproduto/{id}") }}</span><br>
+            <span class="font-weight-bold text-success">Obter produto pelo ID:</span> <span class="cursor-pointer new" data-toggle="collapse" data-target="#p_getproduto">[GET] {{ url("/api/getproduto/{id}") }}</span><br>
 
             <div class="collapse bg-light p-4" id="p_getproduto">
                 Request PHP
@@ -932,7 +936,7 @@
             <!-- Listar produtos de campanha -->
 
             <!-- Listar produtos de campanha -->
-            <span class="font-weight-bold">Listar produtos por campanha</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_listar_por_campanha">[GET] {{ url("/api/getprodutos_de_campanhas/{campanha_id}") }}</span><br>
+            <span class="font-weight-bold text-success">Listar produtos por campanha:</span> <span class="cursor-pointer new" data-toggle="collapse" data-target="#pc_listar_por_campanha">[GET] {{ url("/api/getprodutos_de_campanhas/{campanha_id}") }}</span><br>
 
             <div class="collapse bg-light p-4" id="pc_listar_por_campanha">
                 Request PHP
@@ -1142,7 +1146,7 @@
             <!-- Listar descontos -->
 
             <!-- Listar descontos por produto de campanha -->
-            <span class="font-weight-bold">Listar descontos por produto de campanha</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#d_listar_por_produto_decampanha">[GET] {{ url("/api/getdescontos/{produto_campanha_id}") }}</span><br>
+            <span class="font-weight-bold text-success">Listar descontos por produto de campanha:</span> <span class="cursor-pointer new" data-toggle="collapse" data-target="#d_listar_por_produto_decampanha">[GET] {{ url("/api/getdescontos/{produto_campanha_id}") }}</span><br>
 
             <div class="collapse bg-light p-4" id="d_listar_por_produto_decampanha">
                 Request PHP
