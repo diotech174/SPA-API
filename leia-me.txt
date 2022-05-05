@@ -1,0 +1,47 @@
+Configurar Database:
+
+1. Crie um banco de Dados no seu MYSQL-SERVER
+2. Na raiz do projeto abra o arquivo '.env'
+3. Altere a linha "DB_DATABASE=laravel" para "DB_DATABASE=nome_do_database_criado"
+4. Altere a linha "DB_USERNAME=root" para "DB_DATABASE=nome_do_usuário_do_database"
+5. Altere a linha "DB_PASSWORD=" para "DB_DATABASE=senha_do_database"
+
+Criando as tabelas do banco de dados:
+
+1. Abra um terminal do seu sistema operacional
+2. Digite o comando "cd caminho_da_pasta_raiz_do_seu_projeto"
+3. Digite o comando "php artisan migrate"
+
+Resultado:
+
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (131.03ms)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (49.14ms)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (53.14ms)
+Migrating: 2019_12_14_000001_create_personal_access_tokens_table
+Migrated:  2019_12_14_000001_create_personal_access_tokens_table (66.82ms)
+Migrating: 2022_05_04_002616_create_grupos_de_cidades_table
+Migrated:  2022_05_04_002616_create_grupos_de_cidades_table (29.61ms)
+Migrating: 2022_05_04_002639_create_cidades_table
+Migrated:  2022_05_04_002639_create_cidades_table (104.98ms)
+Migrating: 2022_05_04_002946_create_campanhas_table
+Migrated:  2022_05_04_002946_create_campanhas_table (85.07ms)
+Migrating: 2022_05_04_003008_create_produtos_table
+Migrating: 2022_05_04_004327_create_produtos_campanha_table
+Migrated:  2022_05_04_004327_create_produtos_campanha_table (218.82ms)
+Migrating: 2022_05_04_004339_create_descontos_table
+Migrated:  2022_05_04_004339_create_descontos_table (85.44ms)
+Migrating: 2022_05_04_012600_create_api_keys_table
+Migrated:  2022_05_04_012600_create_api_keys_table (81.90ms)
+
+Iniciando projeto:
+
+1. Digite o comando "php artisan serve"
+
+Resultado:
+
+Starting Laravel development server: http://127.0.0.1:8000
+[Thu May  5 13:20:41 2022] PHP 8.1.2 Development Server (http://127.0.0.1:8000) started
