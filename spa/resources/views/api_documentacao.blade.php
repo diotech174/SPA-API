@@ -55,15 +55,21 @@
         <div class="p-2" id="credenciais">
             <h3>Obtendo Credenciais da API</h3>
             <br>
-            <p class="text-left">
-                SQL COMMAND'S:<br><br>
-                Criando usuário:<br><br>
-                INSERT INTO `users`(`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`)<br>
-                VALUES (1,'MASTER','seuemail@email.com','2022-05-01 00:00:00','suasenha','token123','2022-05-01 00:00:00','2022-05-01 00:00:00');<br><br>
-                Criando chave de API:<br><br>
-                INSERT INTO `api_keys`(`id`, `created_at`, `updated_at`, `key`, `permissions`, `user_id`, `status`)<br>
-                VALUES (1,'2022-05-01 00:00:00','2022-05-01 00:00:00','KEY_81B6791E667FB8D613D294C921FBBD33','{\"show\":\"Y\",\"create\":\"Y\",\"update\":\"Y\",\"delete\":\"Y\"}',1,'A');
-
+            <p class="text-left font-weight-bold">
+                Criando acesso da API
+            </p>
+            <p class="text-left text-success">
+                <span class="text-primary">SQL COMMAND'S:</span><br><br>
+                #Criando usuário:<br><br>
+                <span class="text-dark">
+                    INSERT INTO `users`(`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`)<br>
+                    VALUES (1,'MASTER','seuemail@email.com','2022-05-01 00:00:00','suasenha','token123','2022-05-01 00:00:00','2022-05-01 00:00:00');<br><br>
+                </span>
+                #Criando chave de API:<br><br>
+                <span class="text-dark">
+                    INSERT INTO `api_keys`(`id`, `created_at`, `updated_at`, `key`, `permissions`, `user_id`, `status`)<br>
+                    VALUES (1,'2022-05-01 00:00:00','2022-05-01 00:00:00','KEY_81B6791E667FB8D613D294C921FBBD33','{\"show\":\"Y\",\"create\":\"Y\",\"update\":\"Y\",\"delete\":\"Y\"}',1,'A');
+                </span>
             </p>
             <br>
             <hr>
@@ -715,6 +721,46 @@
             </div>
             <!-- Listar produtos -->
 
+            <!-- Obter produto pelo ID -->
+            <span class="font-weight-bold">Obter produto pelo ID</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#p_getproduto">[GET] {{ url("/api/getproduto/{id}") }}</span><br>
+
+            <div class="collapse bg-light p-4" id="p_getproduto">
+                Request PHP
+                <textarea class="form-control mt-2" rows="9" readonly>
+                    $ch = curl_init();
+
+                    $headers = [
+                        'x-api-key: {sua chave de api}',
+                        'Accept: application/json',
+                        'Content-Type: application/json'
+                    ];
+
+                    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+                    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/getproduto/{id}');
+                    $result = curl_exec($ch);
+                    curl_close($ch);
+
+                    var_dump($result);
+                </textarea>
+                <br>
+                Response JSON Exemplo
+                <textarea class="form-control mt-2" rows="12" readonly>
+                    {
+                        "id":1,
+                        "created_at":"2022-05-04T13:29:04.000000Z",
+                        "updated_at":"2022-05-04T13:29:04.000000Z",
+                        "nome":"protetor solar",
+                        "descricao":"protetor solar",
+                        "valor": "5.00",
+                        "status":"A"
+                    }
+                </textarea>
+            </div>
+            <!-- Obter produto pelo ID -->
+
             <!-- cadastrar produtos -->
             <span class="font-weight-bold">Cadastrar</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#p_cadastrar">[POST] {{ url("/api/produtos/cadastrar") }}</span><br>
 
@@ -942,6 +988,7 @@
                     $data = [
                         "produto_id" => {ID do produto}",
                         "campanha_id" => {ID da campanha},
+                        "status" => "A"
                     ];
 
                     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -963,6 +1010,46 @@
                 </textarea>
             </div>
             <!-- cadastrar produtos de campanha -->
+
+            <!-- alterar produtos de campanha -->
+            <span class="font-weight-bold">Alterar</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_alterar">[POST] {{ url("/api/produtos_campanha/alterar") }}</span><br>
+
+            <div class="collapse bg-light p-4" id="pc_alterar">
+                Request PHP
+                <textarea class="form-control mt-2" rows="16" readonly>
+                    $ch = curl_init("http://localhost:8000/api/produtos_campanha/alterar");
+
+                    $headers = [
+                        'x-api-key: {sua chave de api}',
+                        'Accept: application/json',
+                        'Content-Type: application/json'
+                    ];
+
+                    $data = [
+                        "produto_id" => {ID do produto}",
+                        "campanha_id" => {ID da campanha},
+                        "status" => "{status do produto de campanha}"
+                    ];
+
+                    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                    curl_setopt($ch, CURLOPT_POST, true);
+                    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+                    $response = curl_exec($ch);
+
+                    curl_close ($ch);
+
+                    var_dump($response);
+                </textarea>
+                <br>
+                Response JSON Exemplo
+                <textarea class="form-control mt-2" rows="4" readonly>
+                    {
+                        "status":"success"
+                    }
+                </textarea>
+            </div>
+            <!-- alterar produtos de campanha -->
 
             <!-- deletar produtos de campanha -->
             <span class="font-weight-bold">Excluir</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_excluir">[POST] {{ url("/api/produtos/excluir") }}</span><br>
@@ -1046,6 +1133,7 @@
                             "updated_at":"2022-05-04T13:29:04.000000Z",
                             "produto_de_campanha_id":1,
                             "descricao":"desconto de verão",
+                            "valor":10.00,
                             "status":"A"
                         }
                     ]
@@ -1087,6 +1175,7 @@
                             "updated_at":"2022-05-04T13:29:04.000000Z",
                             "produto_de_campanha_id":1,
                             "descricao":"desconto de verão",
+                            "valor":10.00,
                             "status":"A"
                         }
                     ]

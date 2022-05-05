@@ -56,6 +56,7 @@ Route::post('/produtos/excluir', [ProdutosController::class, 'destroy']);
 // produtos de campanha
 Route::get('/produtos_campanha/listar', [ProdutosCampanhaController::class, 'index']);
 Route::get('/getprodutos_campanha/{id}', [ProdutosCampanhaController::class, 'show']);
+Route::get('/produtos_campanha/alterar', [ProdutosCampanhaController::class, 'edit']);
 Route::post('/produtos_campanha/cadastrar', [ProdutosCampanhaController::class, 'store']);
 Route::post('/produtos_campanha/excluir', [ProdutosCampanhaController::class, 'destroy']);
 

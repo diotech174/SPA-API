@@ -37,6 +37,7 @@ class ProdutosCampanhaController extends Controller
             $p = new Produtos_campanha();
             $p->produto_id = $request->input('produto_id');
             $p->campanha_id = $request->input('campanha_id');
+            $p->status = $request->input('status');
 
             if($p->save())
                 return json_encode(["status" => "success"]);
@@ -63,6 +64,30 @@ class ProdutosCampanhaController extends Controller
          else{
              return json_encode(["status" => "A chave de acesso é inválida!"]);
          }
+    }
+
+    # alterando produto de camapanha
+    public function edit(Request $request)
+    {
+        # verificando permissões da chave da API
+        $a = new Authentication();
+        $permission = $a->Authorization(request()->header('x-api-key'));
+
+        if(isset($permission->delete) && $permission->delete === "Y")
+        {
+            $p = Produtos_campanha::findOrFail($request->input('id'));
+            $p->produto_id = $request->input('produto_id');
+            $p->campanha_id = $request->input('campanha_id');
+            $p->status = $request->input('status');
+
+            if($p->delete())
+                return json_encode(["status" => "success"]);
+            else
+                return json_encode(["status" => "fail"]);
+        }
+        else{
+            return json_encode(["status" => "A chave de acesso é inválida!"]);
+        }
     }
 
     # deletando produto de camapanha

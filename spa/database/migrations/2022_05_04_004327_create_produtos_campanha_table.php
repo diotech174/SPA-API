@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreign('produto_id')->references('id')->on('produtos');
             $table->unsignedBigInteger('campanha_id');
             $table->foreign('campanha_id')->references('id')->on('campanhas');
+            $table->char('status', 1);
         });
     }
 
