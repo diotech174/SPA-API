@@ -54,14 +54,15 @@ Route::post('/produtos/editar', [ProdutosController::class, 'edit']);
 Route::post('/produtos/excluir', [ProdutosController::class, 'destroy']);
 
 // produtos de campanha
-Route::get('/produtos_campanha/listar', [ProdutosCampanhaController::class, 'index']);
-Route::get('/getprodutos_campanha/{id}', [ProdutosCampanhaController::class, 'show']);
-Route::get('/produtos_campanha/alterar', [ProdutosCampanhaController::class, 'edit']);
-Route::post('/produtos_campanha/cadastrar', [ProdutosCampanhaController::class, 'store']);
-Route::post('/produtos_campanha/excluir', [ProdutosCampanhaController::class, 'destroy']);
+Route::get('/produtos_de_campanhas/listar', [ProdutosCampanhaController::class, 'index']);
+Route::get('/getprodutos_de_campanhas/{id}', [ProdutosCampanhaController::class, 'show']);
+Route::post('/produtos_de_campanhas/editar', [ProdutosCampanhaController::class, 'edit']);
+Route::post('/produtos_de_campanhas/cadastrar', [ProdutosCampanhaController::class, 'store']);
+Route::post('/produtos_de_campanhas/excluir', [ProdutosCampanhaController::class, 'destroy']);
 
 // descontos de produtos da campanha
 Route::get('/descontos/listar', [DescontosController::class, 'index']);
 Route::get('/getdescontos/{id}', [DescontosController::class, 'show']);
 Route::post('/descontos/cadastrar', [DescontosController::class, 'store']);
-Route::post('/descontos/excluir', [ProdutosCampanhaControlle::class, 'destroy']);
+Route::post('/descontos/editar', [DescontosController::class, 'edit']);
+Route::post('/descontos/excluir', [DescontosController::class, 'destroy']);

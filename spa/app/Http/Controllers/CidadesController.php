@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Libraries\Authentication;
 use App\Models\Cidades;
+use Exception;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
 
@@ -78,17 +79,23 @@ class CidadesController extends Controller
 
         if(isset($permission->update) && $permission->update === "Y")
         {
-            $c = Cidades::findOrFail($request->id);
+            try{
+                $c = Cidades::findOrFail($request->id);
 
-            $c->nome = $request->input('nome');
-            $c->uf = $request->input('uf');
-            $c->status= $request->input('status');
-            $c->grupo_de_cidades_id= $request->input('grupo_de_cidades_id');
+                $c->nome = $request->input('nome');
+                $c->uf = $request->input('uf');
+                $c->status= $request->input('status');
+                $c->grupo_de_cidades_id= $request->input('grupo_de_cidades_id');
 
-            if($c->save())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($c->save())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -104,12 +111,19 @@ class CidadesController extends Controller
 
         if(isset($permission->delete) && $permission->delete === "Y")
         {
-            $c = Cidades::findOrFail($request->id);
+            try{
 
-            if($c->delete())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                $c = Cidades::findOrFail($request->id);
+
+                if($c->delete())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);

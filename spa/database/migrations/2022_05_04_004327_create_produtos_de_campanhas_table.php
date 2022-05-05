@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('descontos', function (Blueprint $table) {
+        Schema::create('produtos_de_campanhas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->unsignedBigInteger('produto_campanha_id');
-            $table->foreign('produto_campanha_id')->references('id')->on('produtos_de_campanhas');
-            $table->string('descricao');
-            $table->float('valor');
+            $table->unsignedBigInteger('produto_id');
+            $table->foreign('produto_id')->references('id')->on('produtos');
+            $table->unsignedBigInteger('campanha_id');
+            $table->foreign('campanha_id')->references('id')->on('campanhas');
             $table->char('status', 1);
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('descontos');
+        Schema::dropIfExists('produtos_campanha');
     }
 };

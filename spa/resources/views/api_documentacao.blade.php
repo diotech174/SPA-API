@@ -169,7 +169,7 @@
             <div class="collapse bg-light p-4" id="g_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/grupos/alterar");
+                    $ch = curl_init("http://localhost:8000/api/grupos/editar");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -384,7 +384,7 @@
             <div class="collapse bg-light p-4" id="c_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/cidades/alterar");
+                    $ch = curl_init("http://localhost:8000/api/cidades/editar");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -595,7 +595,7 @@
             <div class="collapse bg-light p-4" id="cp_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/campanhas/alterar");
+                    $ch = curl_init("http://localhost:8000/api/campanhas/editar");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -808,7 +808,7 @@
             <div class="collapse bg-light p-4" id="p_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/produtos/alterar");
+                    $ch = curl_init("http://localhost:8000/api/produtos/editar");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -892,7 +892,7 @@
             <span class="font-weight-bold">Requisições HTTP:</span><br><br>
 
             <!-- Listar produtos de campanha -->
-            <span class="font-weight-bold">Listar</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_listar">[GET] {{ url("/api/produtos_campanha/listar") }}</span><br>
+            <span class="font-weight-bold">Listar</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_listar">[GET] {{ url("/api/produtos_de_campanhas/listar") }}</span><br>
 
             <div class="collapse bg-light p-4" id="pc_listar">
                 Request PHP
@@ -909,7 +909,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/produtos_campanha/listar');
+                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/produtos_de_campanhas/listar');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -932,7 +932,7 @@
             <!-- Listar produtos de campanha -->
 
             <!-- Listar produtos de campanha -->
-            <span class="font-weight-bold">Listar produtos por campanha</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_listar_por_campanha">[GET] {{ url("/api/getprodutos_campanha/{campanha_id}") }}</span><br>
+            <span class="font-weight-bold">Listar produtos por campanha</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_listar_por_campanha">[GET] {{ url("/api/getprodutos_de_campanhas/{campanha_id}") }}</span><br>
 
             <div class="collapse bg-light p-4" id="pc_listar_por_campanha">
                 Request PHP
@@ -949,7 +949,7 @@
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/getprodutos_campanha/{campanha_id}');
+                    curl_setopt($ch, CURLOPT_URL, 'http://localhost:8000/api/getprodutos_de_campanhas/{campanha_id}');
                     $result = curl_exec($ch);
                     curl_close($ch);
 
@@ -972,12 +972,12 @@
             <!-- Listar produtos de campanha -->
 
             <!-- cadastrar produtos de campanha -->
-            <span class="font-weight-bold">Cadastrar</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_cadastrar">[POST] {{ url("/api/produtos_campanha/cadastrar") }}</span><br>
+            <span class="font-weight-bold">Cadastrar</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_cadastrar">[POST] {{ url("/api/produtos_de_campanhas/cadastrar") }}</span><br>
 
             <div class="collapse bg-light p-4" id="pc_cadastrar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/produtos_campanha/cadastrar");
+                    $ch = curl_init("http://localhost:8000/api/produtos_de_campanhas/cadastrar");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -1012,12 +1012,12 @@
             <!-- cadastrar produtos de campanha -->
 
             <!-- alterar produtos de campanha -->
-            <span class="font-weight-bold">Alterar</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_alterar">[POST] {{ url("/api/produtos_campanha/alterar") }}</span><br>
+            <span class="font-weight-bold">Alterar</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_alterar">[POST] {{ url("/api/produtos_de_campanhas/editar") }}</span><br>
 
             <div class="collapse bg-light p-4" id="pc_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/produtos_campanha/alterar");
+                    $ch = curl_init("http://localhost:8000/api/produtos_de_campanhas/editar");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -1052,12 +1052,12 @@
             <!-- alterar produtos de campanha -->
 
             <!-- deletar produtos de campanha -->
-            <span class="font-weight-bold">Excluir</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_excluir">[POST] {{ url("/api/produtos/excluir") }}</span><br>
+            <span class="font-weight-bold">Excluir</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#pc_excluir">[POST] {{ url("/api/produtos_de_campanhas/excluir") }}</span><br>
 
             <div class="collapse bg-light p-4" id="pc_excluir">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/produtos_campanha/excluir");
+                    $ch = curl_init("http://localhost:8000/api/produtos_de_campanhas/excluir");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',
@@ -1224,12 +1224,12 @@
             <!-- cadastrar descontos -->
 
             <!-- alterar descontos -->
-            <span class="font-weight-bold">Alterar</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#d_alterar">[POST] {{ url("/api/descontos/alterar") }}</span><br>
+            <span class="font-weight-bold">Alterar</span>: <span class="cursor-pointer" data-toggle="collapse" data-target="#d_alterar">[POST] {{ url("/api/descontos/editar") }}</span><br>
 
             <div class="collapse bg-light p-4" id="d_alterar">
                 Request PHP
                 <textarea class="form-control mt-2" rows="16" readonly>
-                    $ch = curl_init("http://localhost:8000/api/descontos/alterar");
+                    $ch = curl_init("http://localhost:8000/api/descontos/editar");
 
                     $headers = [
                         'x-api-key: {sua chave de api}',

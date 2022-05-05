@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Libraries\Authentication;
 use App\Models\Campanhas;
+use Exception;
 use Illuminate\Http\Request;
 
 class CampanhasController extends Controller
@@ -74,17 +75,23 @@ class CampanhasController extends Controller
 
         if(isset($permission->update) && $permission->update === "Y")
         {
-            $c = Campanhas::findOrFail($request->id);
+            try{
+                $c = Campanhas::findOrFail($request->id);
 
-            $c->nome = $request->input('nome');
-            $c->descricao = $request->input("descricao");
-            $c->status = $request->input("status");
-            $c->grupo_de_cidades_id = $request->input("grupo_de_cidades_id");
+                $c->nome = $request->input('nome');
+                $c->descricao = $request->input("descricao");
+                $c->status = $request->input("status");
+                $c->grupo_de_cidades_id = $request->input("grupo_de_cidades_id");
 
-            if($c->save())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($c->save())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -99,12 +106,18 @@ class CampanhasController extends Controller
 
         if(isset($permission->delete) && $permission->delete === "Y")
         {
-            $c = Campanhas::findOrFail($request->id);
+            try{
+                $c = Campanhas::findOrFail($request->id);
 
-            if($c->delete())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($c->delete())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);

@@ -1,0 +1,1162 @@
+{
+	"info": {
+		"_postman_id": "b52dd685-c912-40cc-9b57-78f3620a0a82",
+		"name": "SPA_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar grupos de cidades",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/grupos/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"grupos",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Grupos de Cidades",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "SP",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "Cidades de São Paulo",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/grupos/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"grupos",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar grupos de Cidades",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "nome",
+							"value": "AL",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "Grupo de Cidades de Alagoas",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/grupos/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"grupos",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir grupo de Cidades",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/grupos/excluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"grupos",
+						"excluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Cidades",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/cidades/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cidades",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Cidades por Grupo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/cidades_por_grupo/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cidades_por_grupo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Cidades",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "Santana de Parnaíba",
+							"type": "text"
+						},
+						{
+							"key": "uf",
+							"value": "SP",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "A",
+							"type": "text"
+						},
+						{
+							"key": "grupo_de_cidades_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cidades/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cidades",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Cidades",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "nome",
+							"value": "Santana de Parnaíba",
+							"type": "text"
+						},
+						{
+							"key": "uf",
+							"value": "SP",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "I",
+							"type": "text"
+						},
+						{
+							"key": "grupo_de_cidades_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cidades/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cidades",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Cidades",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cidades/excluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cidades",
+						"excluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Campanhas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/campanhas/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campanhas",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Campanhas por Grupos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/campanhas_por_grupo/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campanhas_por_grupo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Campanhas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "Campanha de Inverno",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "Campanha de Inverno",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "A",
+							"type": "text"
+						},
+						{
+							"key": "grupo_de_cidades_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/campanhas/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campanhas",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Campanhas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "nome",
+							"value": "Campanha de Inverno",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "Campanha de Inverno",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "I",
+							"type": "text"
+						},
+						{
+							"key": "grupo_de_cidades_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/campanhas/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campanhas",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Campanhas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/campanhas/excluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campanhas",
+						"excluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Produtos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/produtos/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obter produto pelo ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/getproduto/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getproduto",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Produtos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "Chinelo",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "Chinelo Havaianas",
+							"type": "text"
+						},
+						{
+							"key": "valor",
+							"value": "20.00",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/produtos/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Produtos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "nome",
+							"value": "Chinelo",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "Chinelo Havaianas",
+							"type": "text"
+						},
+						{
+							"key": "valor",
+							"value": "20.00",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/produtos/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Produtos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/produtos/excluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos",
+						"excluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Produtos de Campanha",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/produtos_de_campanhas/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos_de_campanhas",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar produtos por campanha",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/getprodutos_de_campanha/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getprodutos_de_campanha",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Produtos de Campanhas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "produto_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "campanha_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/produtos_de_campanhas/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos_de_campanhas",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Produtos de Campanhas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "produto_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "campanha_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "I",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/produtos_de_campanhas/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos_de_campanhas",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Produtos de Campanhas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/produtos_de_campanhas/excluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos_de_campanhas",
+						"excluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Descontos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/descontos/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"descontos",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Descontos por Produto de Campanha",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/getdescontos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getdescontos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Descontos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "produto_campanha_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "Promoção de Abril",
+							"type": "text"
+						},
+						{
+							"key": "valor",
+							"value": "10.00",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/descontos/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"descontos",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Descontos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "produto_campanha_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "Promoção de Abril",
+							"type": "text"
+						},
+						{
+							"key": "valor",
+							"value": "20.00",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "I",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/descontos/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"descontos",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Descontos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/descontos/excluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"descontos",
+						"excluir"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

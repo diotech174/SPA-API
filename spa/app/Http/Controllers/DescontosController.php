@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Libraries\Authentication;
 use App\Models\Descontos;
+use Exception;
 use Illuminate\Http\Request;
 
 class DescontosController extends Controller
@@ -34,13 +35,13 @@ class DescontosController extends Controller
 
         if(isset($permission->update) && $permission->update === "Y")
         {
-            $p = new Descontos;
-            $p->produto_campanha_id = $request->input('produto_campanha_id');
-            $p->descricao = $request->input('descricao');
-            $p->valor = $request->input('valor');
-            $p->status = $request->input('status');
+            $d = new Descontos;
+            $d->produto_campanha_id = $request->input('produto_campanha_id');
+            $d->descricao = $request->input('descricao');
+            $d->valor = $request->input('valor');
+            $d->status = $request->input('status');
 
-            if($p->save())
+            if($d->save())
                 return json_encode(["status" => "success"]);
             else
                 return json_encode(["status" => "fail"]);
@@ -76,15 +77,21 @@ class DescontosController extends Controller
 
         if(isset($permission->update) && $permission->update === "Y")
         {
-            $p = Descontos::findOrFail($request->input('id'));
-            $p->descricao = $request->input('descricao');
-            $p->valor = $request->input('valor');
-            $p->status = $request->input('status');
+            try{
+                $d = Descontos::findOrFail($request->input('id'));
+                $d->descricao = $request->input('descricao');
+                $d->valor = $request->input('valor');
+                $d->status = $request->input('status');
 
-            if($p->save())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($d->save())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -100,12 +107,18 @@ class DescontosController extends Controller
 
         if(isset($permission->delete) && $permission->delete === "Y")
         {
-            $p = Descontos::findOrFail($request->input('id'));
+            try{
+                $d = Descontos::findOrFail($request->input('id'));
 
-            if($p->delete())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($d->delete())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);

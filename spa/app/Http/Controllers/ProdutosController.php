@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Libraries\Authentication;
 use App\Models\Produtos;
+use Exception;
 use Illuminate\Http\Request;
 
 class ProdutosController extends Controller
@@ -76,17 +77,23 @@ class ProdutosController extends Controller
 
         if(isset($permission->update) && $permission->update === "Y")
         {
-            $p = Produtos::findOrFail($request->input('id'));
+            try{
+                $p = Produtos::findOrFail($request->input('id'));
 
-            $p->nome = $request->input('nome');
-            $p->descricao = $request->input('descricao');
-            $p->valor = $request->input('valor');
-            $p->status = $request->input('status');
+                $p->nome = $request->input('nome');
+                $p->descricao = $request->input('descricao');
+                $p->valor = $request->input('valor');
+                $p->status = $request->input('status');
 
-            if($p->save())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($p->save())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -103,12 +110,18 @@ class ProdutosController extends Controller
 
         if(isset($permission->delete) && $permission->delete === "Y")
         {
-            $p = Produtos::findOrFail($request->input('id'));
+            try{
+                $p = Produtos::findOrFail($request->input('id'));
 
-            if($p->delete())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($p->delete())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
