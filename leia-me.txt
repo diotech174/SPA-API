@@ -17,26 +17,26 @@ Resultado:
 
 Migration table created successfully.
 Migrating: 2014_10_12_000000_create_users_table
-Migrated:  2014_10_12_000000_create_users_table (131.03ms)
+Migrated:  2014_10_12_000000_create_users_table (54.38ms)
 Migrating: 2014_10_12_100000_create_password_resets_table
-Migrated:  2014_10_12_100000_create_password_resets_table (49.14ms)
+Migrated:  2014_10_12_100000_create_password_resets_table (34.65ms)
 Migrating: 2019_08_19_000000_create_failed_jobs_table
-Migrated:  2019_08_19_000000_create_failed_jobs_table (53.14ms)
+Migrated:  2019_08_19_000000_create_failed_jobs_table (38.25ms)
 Migrating: 2019_12_14_000001_create_personal_access_tokens_table
-Migrated:  2019_12_14_000001_create_personal_access_tokens_table (66.82ms)
+Migrated:  2019_12_14_000001_create_personal_access_tokens_table (54.30ms)
 Migrating: 2022_05_04_002616_create_grupos_de_cidades_table
-Migrated:  2022_05_04_002616_create_grupos_de_cidades_table (29.61ms)
+Migrated:  2022_05_04_002616_create_grupos_de_cidades_table (28.70ms)
 Migrating: 2022_05_04_002639_create_cidades_table
-Migrated:  2022_05_04_002639_create_cidades_table (104.98ms)
+Migrated:  2022_05_04_002639_create_cidades_table (80.69ms)
 Migrating: 2022_05_04_002946_create_campanhas_table
-Migrated:  2022_05_04_002946_create_campanhas_table (85.07ms)
+Migrated:  2022_05_04_002946_create_campanhas_table (92.96ms)
 Migrating: 2022_05_04_003008_create_produtos_table
-Migrating: 2022_05_04_004327_create_produtos_campanha_table
-Migrated:  2022_05_04_004327_create_produtos_campanha_table (218.82ms)
+Migrating: 2022_05_04_004327_create_produtos_de_campanhas_table
+Migrated:  2022_05_04_004327_create_produtos_de_campanhas_table (134.87ms)
 Migrating: 2022_05_04_004339_create_descontos_table
-Migrated:  2022_05_04_004339_create_descontos_table (85.44ms)
+Migrated:  2022_05_04_004339_create_descontos_table (80.55ms)
 Migrating: 2022_05_04_012600_create_api_keys_table
-Migrated:  2022_05_04_012600_create_api_keys_table (81.90ms)
+Migrated:  2022_05_04_012600_create_api_keys_table (84.32ms)
 
 Iniciando projeto:
 
