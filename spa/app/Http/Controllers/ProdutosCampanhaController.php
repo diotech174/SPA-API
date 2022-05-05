@@ -18,8 +18,14 @@ class ProdutosCampanhaController extends Controller
 
         if(isset($permission->show) && $permission->show === "Y")
         {
-            $p = new Produtos_de_campanhas();
-            return json_encode($p->all());
+            try{
+                $p = new Produtos_de_campanhas();
+                return json_encode($p->all());
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -35,15 +41,21 @@ class ProdutosCampanhaController extends Controller
 
         if(isset($permission->create) && $permission->create === "Y")
         {
-            $p = new Produtos_de_campanhas();
-            $p->produto_id = $request->input('produto_id');
-            $p->campanha_id = $request->input('campanha_id');
-            $p->status = $request->input('status');
+            try{
+                $p = new Produtos_de_campanhas();
+                $p->produto_id = $request->input('produto_id');
+                $p->campanha_id = $request->input('campanha_id');
+                $p->status = $request->input('status');
 
-            if($p->save())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($p->save())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -59,8 +71,14 @@ class ProdutosCampanhaController extends Controller
 
          if(isset($permission->show) && $permission->show === "Y")
          {
-             $p = new Produtos_de_campanhas();
-             return json_encode($p->all()->where("campanha_id", "=", $id));
+            try{
+                $p = new Produtos_de_campanhas();
+                return json_encode($p->all()->where("campanha_id", "=", $id));
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
          }
          else{
              return json_encode(["status" => "A chave de acesso é inválida!"]);

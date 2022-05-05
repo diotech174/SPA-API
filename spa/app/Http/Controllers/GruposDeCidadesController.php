@@ -18,8 +18,14 @@ class GruposDeCidadesController extends Controller
 
         if(isset($permission->show) && $permission->show === "Y")
         {
-            $g = new Grupos_de_cidades();
-            return json_encode($g->all());
+            try{
+                $g = new Grupos_de_cidades();
+                return json_encode($g->all());
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -35,16 +41,22 @@ class GruposDeCidadesController extends Controller
 
         if(isset($permission->create) && $permission->create === "Y")
         {
-            $g = new Grupos_de_cidades;
+            try{
+                $g = new Grupos_de_cidades;
 
-            $g->nome = $request->input('nome');
-            $g->descricao = $request->input('descricao');
-            $g->status= $request->input('status');
+                $g->nome = $request->input('nome');
+                $g->descricao = $request->input('descricao');
+                $g->status= $request->input('status');
 
-            if($g->save())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($g->save())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);

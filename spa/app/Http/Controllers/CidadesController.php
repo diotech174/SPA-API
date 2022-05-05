@@ -19,8 +19,14 @@ class CidadesController extends Controller
 
         if(isset($permission->show) && $permission->show === "Y")
         {
-            $c = new Cidades();
-            return json_encode($c->all());
+            try{
+                $c = new Cidades();
+                return json_encode($c->all());
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -36,8 +42,14 @@ class CidadesController extends Controller
 
         if(isset($permission->show) && $permission->show === "Y")
         {
-            $c = new Cidades();
-            return json_encode($c->all()->where("grupo_de_cidades_id", "=", $id));
+            try{
+                $c = new Cidades();
+                return json_encode($c->all()->where("grupo_de_cidades_id", "=", $id));
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -53,17 +65,23 @@ class CidadesController extends Controller
 
         if(isset($permission->create) && $permission->create === "Y")
         {
-            $c = new Cidades;
+            try{
+                $c = new Cidades;
 
-            $c->nome = $request->input('nome');
-            $c->uf = $request->input('uf');
-            $c->status= $request->input('status');
-            $c->grupo_de_cidades_id= $request->input('grupo_de_cidades_id');
+                $c->nome = $request->input('nome');
+                $c->uf = $request->input('uf');
+                $c->status= $request->input('status');
+                $c->grupo_de_cidades_id= $request->input('grupo_de_cidades_id');
 
-            if($c->save())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($c->save())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);

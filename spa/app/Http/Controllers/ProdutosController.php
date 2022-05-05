@@ -18,8 +18,14 @@ class ProdutosController extends Controller
 
         if(isset($permission->show) && $permission->show === "Y")
         {
-            $p = new Produtos();
-            return json_encode($p->all());
+            try{
+                $p = new Produtos();
+                return json_encode($p->all());
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -35,16 +41,22 @@ class ProdutosController extends Controller
 
         if(isset($permission->create) && $permission->create === "Y")
         {
-            $p = new Produtos();
-            $p->nome = $request->input('nome');
-            $p->descricao = $request->input('descricao');
-            $p->valor = $request->input('valor');
-            $p->status = $request->input('status');
+            try{
+                $p = new Produtos();
+                $p->nome = $request->input('nome');
+                $p->descricao = $request->input('descricao');
+                $p->valor = $request->input('valor');
+                $p->status = $request->input('status');
 
-            if($p->save())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($p->save())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -60,8 +72,14 @@ class ProdutosController extends Controller
 
         if(isset($permission->show) && $permission->show === "Y")
         {
-            $p = new Produtos();
-            return json_encode($p->all()->where("id", "=", $id));
+            try{
+                $p = new Produtos();
+                return json_encode($p->all()->where("id", "=", $id));
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);

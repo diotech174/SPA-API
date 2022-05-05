@@ -18,8 +18,15 @@ class DescontosController extends Controller
 
         if(isset($permission->show) && $permission->show === "Y")
         {
-            $d = new Descontos();
-            return json_decode($d->all());
+            try{
+                $d = new Descontos();
+                return json_decode($d->all());
+
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -35,16 +42,22 @@ class DescontosController extends Controller
 
         if(isset($permission->update) && $permission->update === "Y")
         {
-            $d = new Descontos;
-            $d->produto_campanha_id = $request->input('produto_campanha_id');
-            $d->descricao = $request->input('descricao');
-            $d->valor = $request->input('valor');
-            $d->status = $request->input('status');
+            try{
+                $d = new Descontos;
+                $d->produto_campanha_id = $request->input('produto_campanha_id');
+                $d->descricao = $request->input('descricao');
+                $d->valor = $request->input('valor');
+                $d->status = $request->input('status');
 
-            if($d->save())
-                return json_encode(["status" => "success"]);
-            else
-                return json_encode(["status" => "fail"]);
+                if($d->save())
+                    return json_encode(["status" => "success"]);
+                else
+                    return json_encode(["status" => "fail"]);
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
@@ -60,8 +73,14 @@ class DescontosController extends Controller
 
         if(isset($permission->show) && $permission->show === "Y")
         {
-            $d = new Descontos();
-            return json_decode($d->all()->where("produto_campanha_id", "=", $id));
+            try{
+                $d = new Descontos();
+                return json_decode($d->all()->where("produto_campanha_id", "=", $id));
+            }
+            catch(Exception $e)
+            {
+                return json_encode(["status" => $e->getMessage()]);
+            }
         }
         else{
             return json_encode(["status" => "A chave de acesso é inválida!"]);
