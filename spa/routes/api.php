@@ -20,11 +20,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// documentação
-Route::get('/', function () {
-    return view('api_documentacao');
-});
-
 // grupo de cidades
 Route::get('/grupos/listar', [GruposDeCidadesController::class, 'index']);
 Route::get('/grupos/{id}', [GruposDeCidadesController::class, 'show']);

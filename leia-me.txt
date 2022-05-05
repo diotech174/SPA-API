@@ -49,4 +49,4 @@ Starting Laravel development server: http://127.0.0.1:8000
 
 OBSERVAÇÕES:
 
-Acesse o endereço "http://127.0.0.1:8000/api" para vizualizar a documentação
+Acesse o endereço "http://127.0.0.1:8000" no seu browser para vizualizar a documentação
