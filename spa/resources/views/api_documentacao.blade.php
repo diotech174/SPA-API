@@ -22,7 +22,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a class="navbar-brand" href="/api">Documentação API</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,6 +34,8 @@
                             Indice
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#credenciais">Obtendo Credenciais da API</a>
+                        <hr>
                         <a class="dropdown-item" href="#grupos_de_cidades">Grupo de Cidades</a>
                         <a class="dropdown-item" href="#cidades">Cidades</a>
                         <a class="dropdown-item" href="#campanhas">Campanhas</a>
@@ -46,8 +48,26 @@
             </div>
         </nav>
     </header>
-
+    <br>
+    <br>
     <main class="container mt-5">
+
+        <div class="p-2" id="credenciais">
+            <h3>Obtendo Credenciais da API</h3>
+            <br>
+            <p class="text-left">
+                SQL COMMAND'S:<br><br>
+                Criando usuário:<br><br>
+                INSERT INTO `users`(`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`)<br>
+                VALUES (1,'MASTER','seuemail@email.com','2022-05-01 00:00:00','suasenha','token123','2022-05-01 00:00:00','2022-05-01 00:00:00');<br><br>
+                Criando chave de API:<br><br>
+                INSERT INTO `api_keys`(`id`, `created_at`, `updated_at`, `key`, `permissions`, `user_id`, `status`)<br>
+                VALUES (1,'2022-05-01 00:00:00','2022-05-01 00:00:00','KEY_81B6791E667FB8D613D294C921FBBD33','{\"show\":\"Y\",\"create\":\"Y\",\"update\":\"Y\",\"delete\":\"Y\"}',1,'A');
+
+            </p>
+            <br>
+            <hr>
+        </div>
 
         <!-- Sessão de Grupode de Cidades =========================================================== -->
 
@@ -89,8 +109,7 @@
                             "created_at":"2022-05-04T13:29:04.000000Z",
                             "updated_at":"2022-05-04T13:29:04.000000Z",
                             "nome":"SP",
-                            "descricao":"Grupos
-                            de S\u00e3o Paulo",
+                            "descricao":"Grupos de S\u00e3o Paulo",
                             "status":"A"
                         }
                     ]
