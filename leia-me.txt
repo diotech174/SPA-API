@@ -1,10 +1,11 @@
 Configurar Database:
 
 1. Crie um banco de Dados no seu MYSQL-SERVER
-2. Na raiz do projeto abra o arquivo '.env'
-3. Altere a linha "DB_DATABASE=laravel" para "DB_DATABASE=nome_do_database_criado"
-4. Altere a linha "DB_USERNAME=root" para "DB_DATABASE=nome_do_usuário_do_database"
-5. Altere a linha "DB_PASSWORD=" para "DB_DATABASE=senha_do_database"
+2. Renomeie o aquivo '.env.example' para '.env'
+3. Na raiz do projeto abra o arquivo '.env'
+4. Altere a linha "DB_DATABASE=laravel" para "DB_DATABASE=nome_do_database_criado"
+5. Altere a linha "DB_USERNAME=root" para "DB_DATABASE=nome_do_usuário_do_database"
+6. Altere a linha "DB_PASSWORD=" para "DB_DATABASE=senha_do_database"
 
 Criando as tabelas do banco de dados:
 
