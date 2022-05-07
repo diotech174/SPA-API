@@ -15,19 +15,13 @@ class Authentication
     public function Authorization($key)
     {
 
-        try{
-            $a = new Api_keys();
-            $access = $a->all()->where("key", "=", $key)->first();
+        $a = new Api_keys();
+        $access = $a->all()->where("key", "=", $key)->first();
 
-            if(isset($access["permissions"]))
-                return json_decode($access["permissions"]);
-            else
-                return null;
-        }
-        catch(Exception $e) // erro
-        {
+        if(isset($access["permissions"]))
+            return json_decode($access["permissions"]);
+        else
             return null;
-        }
 
     }
 }
