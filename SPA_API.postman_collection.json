@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b52dd685-c912-40cc-9b57-78f3620a0a82",
+		"_postman_id": "c6d515fa-c747-450f-9176-00fde7e778e2",
 		"name": "SPA_API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -196,33 +196,6 @@
 			"response": []
 		},
 		{
-			"name": "Listar Cidades por Grupo",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-api-key",
-						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8081/api/cidades_por_grupo/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"api",
-						"cidades_por_grupo",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Cadastrar Cidades",
 			"request": {
 				"method": "POST",
@@ -390,33 +363,6 @@
 						"api",
 						"campanhas",
 						"listar"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Listar Campanhas por Grupos",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-api-key",
-						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8081/api/campanhas_por_grupo/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"api",
-						"campanhas_por_grupo",
-						"1"
 					]
 				}
 			},
@@ -596,33 +542,6 @@
 			"response": []
 		},
 		{
-			"name": "Obter produto pelo ID",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-api-key",
-						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8081/api/getproduto/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"api",
-						"getproduto",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Cadastrar Produtos",
 			"request": {
 				"method": "POST",
@@ -796,33 +715,6 @@
 			"response": []
 		},
 		{
-			"name": "Listar produtos por campanha",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-api-key",
-						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8081/api/getprodutos_de_campanhas/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"api",
-						"getprodutos_de_campanhas",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Cadastrar Produtos de Campanhas",
 			"request": {
 				"method": "POST",
@@ -980,33 +872,6 @@
 						"api",
 						"descontos",
 						"listar"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Listar Descontos por Produto de Campanha",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-api-key",
-						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8081/api/getdescontos/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"api",
-						"getdescontos",
-						"1"
 					]
 				}
 			},
