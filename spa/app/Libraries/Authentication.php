@@ -3,6 +3,7 @@
 namespace App\Libraries;
 
 use App\Models\Api_keys;
+use Exception;
 
 class Authentication
 {
@@ -13,12 +14,20 @@ class Authentication
 
     public function Authorization($key)
     {
-        $a = new Api_keys();
-        $access = $a->all()->where("key", "=", $key)->first();
 
-        if(isset($access["permissions"]))
-            return json_decode($access["permissions"]);
-        else
+        try{
+            $a = new Api_keys();
+            $access = $a->all()->where("key", "=", $key)->first();
+
+            if(isset($access["permissions"]))
+                return json_decode($access["permissions"]);
+            else
+                return null;
+        }
+        catch(Exception $e)
+        {
             return null;
+        }
+
     }
 }
