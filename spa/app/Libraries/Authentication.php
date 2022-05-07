@@ -24,7 +24,7 @@ class Authentication
             else
                 return null;
         }
-        catch(Exception $e)
+        catch(Exception $e) // erro
         {
             return null;
         }
