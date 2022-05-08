@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "b52dd685-c912-40cc-9b57-78f3620a0a82",
-		"name": "SPA_API",
+		"_postman_id": "b9ec8edb-7082-4678-8bdf-496e70b0b895",
+		"name": "api-m2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -17,12 +17,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8081/api/grupos/listar",
+					"raw": "http://api-m2.diogenestec.net:80/api/grupos/listar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"grupos",
@@ -64,12 +66,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/grupos/cadastrar",
+					"raw": "http://api-m2.diogenestec.net:80/api/grupos/cadastrar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"grupos",
@@ -116,12 +120,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/grupos/editar",
+					"raw": "http://api-m2.diogenestec.net:80/api/grupos/editar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"grupos",
@@ -153,12 +159,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/grupos/excluir",
+					"raw": "http://api-m2.diogenestec.net:80/api/grupos/excluir",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"grupos",
@@ -180,43 +188,18 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8081/api/cidades/listar",
+					"raw": "http://api-m2.diogenestec.net:80/api/cidades/listar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"cidades",
 						"listar"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Listar Cidades por Grupo",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-api-key",
-						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8081/api/cidades_por_grupo/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"api",
-						"cidades_por_grupo",
-						"1"
 					]
 				}
 			},
@@ -259,12 +242,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/cidades/cadastrar",
+					"raw": "http://api-m2.diogenestec.net:80/api/cidades/cadastrar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"cidades",
@@ -316,12 +301,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/cidades/editar",
+					"raw": "http://api-m2.diogenestec.net:80/api/cidades/editar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"cidades",
@@ -353,12 +340,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/cidades/excluir",
+					"raw": "http://api-m2.diogenestec.net:80/api/cidades/excluir",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"cidades",
@@ -380,43 +369,18 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8081/api/campanhas/listar",
+					"raw": "http://api-m2.diogenestec.net:80/api/campanhas/listar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"campanhas",
 						"listar"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Listar Campanhas por Grupos",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-api-key",
-						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8081/api/campanhas_por_grupo/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"api",
-						"campanhas_por_grupo",
-						"1"
 					]
 				}
 			},
@@ -459,12 +423,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/campanhas/cadastrar",
+					"raw": "http://api-m2.diogenestec.net:80/api/campanhas/cadastrar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"campanhas",
@@ -516,12 +482,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/campanhas/editar",
+					"raw": "http://api-m2.diogenestec.net:80/api/campanhas/editar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"campanhas",
@@ -553,12 +521,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/campanhas/excluir",
+					"raw": "http://api-m2.diogenestec.net:80/api/campanhas/excluir",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"campanhas",
@@ -580,43 +550,18 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8081/api/produtos/listar",
+					"raw": "http://api-m2.diogenestec.net:80/api/produtos/listar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"produtos",
 						"listar"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Obter produto pelo ID",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-api-key",
-						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8081/api/getproduto/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"api",
-						"getproduto",
-						"1"
 					]
 				}
 			},
@@ -659,12 +604,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/produtos/cadastrar",
+					"raw": "http://api-m2.diogenestec.net:80/api/produtos/cadastrar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"produtos",
@@ -716,12 +663,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/produtos/editar",
+					"raw": "http://api-m2.diogenestec.net:80/api/produtos/editar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"produtos",
@@ -753,12 +702,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/produtos/excluir",
+					"raw": "http://api-m2.diogenestec.net:80/api/produtos/excluir",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"produtos",
@@ -780,12 +731,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8081/api/produtos_de_campanhas/listar",
+					"raw": "http://api-m2.diogenestec.net:80/api/produtos_de_campanhas/listar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"produtos_de_campanhas",
@@ -807,12 +760,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8081/api/getprodutos_de_campanhas/1",
+					"raw": "http://api-m2.diogenestec.net:80/api/getprodutos_de_campanhas/1",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"getprodutos_de_campanhas",
@@ -854,12 +809,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/produtos_de_campanhas/cadastrar",
+					"raw": "http://api-m2.diogenestec.net:80/api/produtos_de_campanhas/cadastrar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"produtos_de_campanhas",
@@ -906,12 +863,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/produtos_de_campanhas/editar",
+					"raw": "http://api-m2.diogenestec.net:80/api/produtos_de_campanhas/editar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"produtos_de_campanhas",
@@ -943,12 +902,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/produtos_de_campanhas/excluir",
+					"raw": "http://api-m2.diogenestec.net:80/api/produtos_de_campanhas/excluir",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"produtos_de_campanhas",
@@ -970,43 +931,18 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8081/api/descontos/listar",
+					"raw": "http://api-m2.diogenestec.net:80/api/descontos/listar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"descontos",
 						"listar"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Listar Descontos por Produto de Campanha",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-api-key",
-						"value": "KEY_81B6791E667FB8D613D294C921FBBD33",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8081/api/getdescontos/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"api",
-						"getdescontos",
-						"1"
 					]
 				}
 			},
@@ -1049,12 +985,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/descontos/cadastrar",
+					"raw": "http://api-m2.diogenestec.net:80/api/descontos/cadastrar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"descontos",
@@ -1106,12 +1044,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/descontos/editar",
+					"raw": "http://api-m2.diogenestec.net:80/api/descontos/editar",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"descontos",
@@ -1143,12 +1083,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/descontos/excluir",
+					"raw": "http://api-m2.diogenestec.net:80/api/descontos/excluir",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api-m2",
+						"diogenestec",
+						"net"
 					],
-					"port": "8081",
+					"port": "80",
 					"path": [
 						"api",
 						"descontos",
