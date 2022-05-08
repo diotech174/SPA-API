@@ -1,7 +1,12 @@
 {
 	"info": {
+<<<<<<< HEAD:api-m2.postman_collection.json
 		"_postman_id": "b9ec8edb-7082-4678-8bdf-496e70b0b895",
 		"name": "api-m2",
+=======
+		"_postman_id": "c6d515fa-c747-450f-9176-00fde7e778e2",
+		"name": "SPA_API",
+>>>>>>> 3bd62dccdc00b3da99bb5a2ba0120278f17ef4dc:SPA_API.postman_collection.json
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -749,6 +754,7 @@
 			"response": []
 		},
 		{
+<<<<<<< HEAD:api-m2.postman_collection.json
 			"name": "Listar produtos por campanha",
 			"request": {
 				"method": "GET",
@@ -778,6 +784,8 @@
 			"response": []
 		},
 		{
+=======
+>>>>>>> 3bd62dccdc00b3da99bb5a2ba0120278f17ef4dc:SPA_API.postman_collection.json
 			"name": "Cadastrar Produtos de Campanhas",
 			"request": {
 				"method": "POST",

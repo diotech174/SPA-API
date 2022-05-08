@@ -297,7 +297,7 @@
             </div>
             <!-- Listar cidades -->
 
-            <!-- Listar cidades por grupo -->
+            <!-- Listar cidades por grupo
             <span class="font-weight-bold text-success">Listar por grupo:</span> <br><span class="cursor-pointer ml-4 new" data-toggle="collapse" data-target="#c_listar_por_grupo">[GET] {{ url("/api/cidades_por_grupo/{grupo_de_cidades_id}") }}</span><br><br>
 
             <div class="collapse bg-light p-4" id="c_listar_por_grupo">
@@ -339,7 +339,7 @@
                     ]
                 </textarea>
             </div>
-            <!-- Listar cidades por grupo -->
+            Listar cidades por grupo -->
 
             <!-- cadastrar cidades -->
             <span class="font-weight-bold">Cadastrar</span>: <br><span class="cursor-pointer ml-4" data-toggle="collapse" data-target="#c_cadastrar">[POST] {{ url("/api/cidades/cadastrar") }}</span><br><br>
@@ -513,7 +513,7 @@
             </div>
             <!-- Listar campanhas -->
 
-            <!-- Listar campanhas por grupo -->
+            <!-- Listar campanhas por grupo
             <span class="font-weight-bold text-success">Listar por grupo:</span> <br><span class="cursor-pointer ml-4 new" data-toggle="collapse" data-target="#cp_listar_por_grupo">[GET] {{ url("/api/campanhas_por_grupo/{grupo_de_cidades_id}") }}</span><br><br>
 
             <div class="collapse bg-light p-4" id="cp_listar_por_grupo">
@@ -550,7 +550,7 @@
                     }
                 </textarea>
             </div>
-            <!-- Listar campanhas por grupo -->
+            Listar campanhas por grupo -->
 
             <!-- cadastrar campanhas -->
             <span class="font-weight-bold">Cadastrar</span>: <br><span class="cursor-pointer ml-4" data-toggle="collapse" data-target="#cp_cadastrar">[POST] {{ url("/api/campanhas/cadastrar") }}</span><br><br>
@@ -725,7 +725,7 @@
             </div>
             <!-- Listar produtos -->
 
-            <!-- Obter produto pelo ID -->
+            <!-- Obter produto pelo ID
             <span class="font-weight-bold text-success">Obter produto pelo ID:</span> <br><span class="cursor-pointer ml-4 new" data-toggle="collapse" data-target="#p_getproduto">[GET] {{ url("/api/getproduto/{id}") }}</span><br><br>
 
             <div class="collapse bg-light p-4" id="p_getproduto">
@@ -763,7 +763,7 @@
                     }
                 </textarea>
             </div>
-            <!-- Obter produto pelo ID -->
+            Obter produto pelo ID -->
 
             <!-- cadastrar produtos -->
             <span class="font-weight-bold">Cadastrar</span>: <br><span class="cursor-pointer ml-4" data-toggle="collapse" data-target="#p_cadastrar">[POST] {{ url("/api/produtos/cadastrar") }}</span><br><br>
@@ -935,7 +935,7 @@
             </div>
             <!-- Listar produtos de campanha -->
 
-            <!-- Listar produtos de campanha -->
+            <!-- Listar produtos de campanha
             <span class="font-weight-bold text-success">Listar produtos por campanha:</span> <br><span class="cursor-pointer ml-4 new" data-toggle="collapse" data-target="#pc_listar_por_campanha">[GET] {{ url("/api/getprodutos_de_campanhas/{campanha_id}") }}</span><br><br>
 
             <div class="collapse bg-light p-4" id="pc_listar_por_campanha">
@@ -973,7 +973,7 @@
                     ]
                 </textarea>
             </div>
-            <!-- Listar produtos de campanha -->
+            Listar produtos de campanha -->
 
             <!-- cadastrar produtos de campanha -->
             <span class="font-weight-bold">Cadastrar</span>: <br><span class="cursor-pointer ml-4" data-toggle="collapse" data-target="#pc_cadastrar">[POST] {{ url("/api/produtos_de_campanhas/cadastrar") }}</span><br><br>
@@ -1145,7 +1145,7 @@
             </div>
             <!-- Listar descontos -->
 
-            <!-- Listar descontos por produto de campanha -->
+            <!-- Listar descontos por produto de campanha
             <span class="font-weight-bold text-success">Listar descontos por produto de campanha:</span> <br><span class="cursor-pointer ml-4 new" data-toggle="collapse" data-target="#d_listar_por_produto_decampanha">[GET] {{ url("/api/getdescontos/{produto_campanha_id}") }}</span><br><br>
 
             <div class="collapse bg-light p-4" id="d_listar_por_produto_decampanha">
@@ -1185,7 +1185,7 @@
                     ]
                 </textarea>
             </div>
-            <!-- Listar descontos por produto de campanha -->
+             Listar descontos por produto de campanha -->
 
             <!-- cadastrar descontos -->
             <span class="font-weight-bold">Cadastrar</span>: <br><span class="cursor-pointer ml-4" data-toggle="collapse" data-target="#d_cadastrar">[POST] {{ url("/api/descontos/cadastrar") }}</span><br><br>
